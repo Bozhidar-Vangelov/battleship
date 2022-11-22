@@ -8,9 +8,10 @@
       "forceConsistentCasingInFileNames": true,
       "noFallthroughCasesInSwitch": true,
       "isolatedModules": true,
-      "resolveJsonModule": true
+      "resolveJsonModule": true,
+      "baseUrl": "src"
     },
     "$schema": "https://json.schemastore.org/tsconfig",
     "display": "Recommended",
     "compileOnSave": true
-  }
+}
