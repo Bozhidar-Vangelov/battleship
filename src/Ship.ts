@@ -1,12 +1,14 @@
 export class Ship {
-  x: number;
-  y: number;
+  public static shipLength: number;
+  public static hits: boolean[];
+  public static hit: () => void;
 
-  constructor(x: number, y: number) {
-    (this.x = x), (this.y = y);
+  constructor(shipLength: number) {
+    Ship.shipLength = shipLength;
+    Ship.hits = new Array(shipLength).fill(false);
   }
 
-  add() {
-    return this.x + this.y;
+  hit(index: number) {
+    Ship.hits[index] = true;
   }
 }
