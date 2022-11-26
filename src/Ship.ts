@@ -1,14 +1,24 @@
 export class Ship {
-  public static shipLength: number;
-  public static hits: boolean[];
-  public static hit: () => void;
+  public shipLength: number;
+  public hits: number[];
 
   constructor(shipLength: number) {
-    Ship.shipLength = shipLength;
-    Ship.hits = new Array(shipLength).fill(false);
+    this.shipLength = shipLength;
+    this.hits = [];
   }
 
-  hit(index: number) {
-    Ship.hits[index] = true;
+  hit(location: number) {
+    if (
+      this.hits.includes(location) ||
+      location < 0 ||
+      location > this.shipLength
+    ) {
+      return;
+    }
+    this.hits.push(location);
+  }
+
+  isSunk() {
+    return this.shipLength === this.hits.length;
   }
 }
