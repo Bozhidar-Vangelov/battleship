@@ -9,8 +9,13 @@
       "noFallthroughCasesInSwitch": true,
       "isolatedModules": true,
       "resolveJsonModule": true,
-      "baseUrl": "src"
+      "baseUrl": "src",
+      "allowJs": true,
+      "allowSyntheticDefaultImports": true
     },
+    "include": [
+      "src"
+    ],
     "$schema": "https://json.schemastore.org/tsconfig",
     "display": "Recommended",
     "compileOnSave": true
