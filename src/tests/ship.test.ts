@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, test } from '@jest/globals';
 import { Ship } from '../Ship';
 
-describe('sum module', () => {
+describe('Ship module', () => {
   let ship: Ship;
 
   beforeEach(() => {
